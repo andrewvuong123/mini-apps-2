@@ -1,10 +1,62 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(#F7971E, #FFD200);
+  min-height: 100%;
+}
 
 #app ul {
   display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
+  text-decoration: none;
 }
 
 #app li {
   display: inline-block;
+  margin-right: 10px;
+  border: solid;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.header {
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  top: 10%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #fff;
+  max-width: 60%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.event {
+  margin-bottom: 3%;
+  border-bottom: 3px solid;
+}
+
+.title {
+
+}
+
+.date {
+  font-weight: 100;
+}
+
+.text {
+
 }

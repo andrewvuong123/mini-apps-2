@@ -5,7 +5,11 @@ const Events = (props) => {
   return (
     <div>
       {props.events.map((event) =>
-        <h3>{event.description}</h3>
+        <div className='event'>
+          <h3 className='title'>{event.category2}: <span className='date'> {event.date}</span> </h3>
+          <p className='text'>{event.description}</p>
+        </div>
+
       )}
     </div>
   )

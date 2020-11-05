@@ -61,27 +61,30 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Search History:
-            <input value={this.state.value} onChange={this.handleInputChange} />
-          </label>
-          <button type="submit">Search</button>
-        </form>
-        <ReactPaginate
-          previousLabel={'previous'}
-          nextLabel={'next'}
-          breakLabel={'...'}
-          breakClassName={'break-me'}
-          pageCount={this.state.pageCount}
-          marginPagesDisplayed = {2}
-          pageRangeDisplayed={5}
-          onPageChange={this.handlePageClick}
-          containerClassName={'pagination'}
-          subContainerClassName={'pages pagination'}
-          activeClassName={'active'}
-        />
-        <Events events={this.state.data} />
+        <h1 className="header">Historical Events</h1>
+        <div className="container">
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Search Through History:
+              <input value={this.state.value} onChange={this.handleInputChange} />
+            </label>
+            <button type="submit">Search</button>
+          </form>
+          <ReactPaginate
+            previousLabel={'<'}
+            nextLabel={'>'}
+            breakLabel={'...'}
+            breakClassName={'break-me'}
+            pageCount={this.state.pageCount}
+            marginPagesDisplayed = {2}
+            pageRangeDisplayed={2}
+            onPageChange={this.handlePageClick}
+            containerClassName={'pagination'}
+            subContainerClassName={'pages pagination'}
+            activeClassName={'active'}
+          />
+          <Events events={this.state.data} />
+        </div>
       </div>
     )
   }
